@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F7F6F2;
+  --foreground: #252B33;
+  --ink-primary: #17283B;
+  --ink-muted: #526A80;
+  --border-subtle: #D3DDE5;
+  --sand-surface: #FCFCF9;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Restrained Editorial Typography */
+.font-editorial {
+  font-family: "Newsreader", "Charter", "Georgia", serif;
+  letter-spacing: -0.015em;
+}
+
+/* Subtle research grid pattern */
+.bg-research-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(82, 106, 128, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(82, 106, 128, 0.05) 1px, transparent 1px);
+}
+
+/* Focus styles for keyboard accessibility */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #17283B;
+  outline-offset: 2px;
+}
+
+/* Print layout for Evidence Audit Reports */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
